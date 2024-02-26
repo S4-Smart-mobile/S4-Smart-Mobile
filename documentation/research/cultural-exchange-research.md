@@ -8,6 +8,7 @@
   - [Canvas instruction](#canvas-instruction)
   - [Problem definition](#problem-definition)
     - [Questions](#questions)
+    - [Potential solutions](#potential-solutions)
   - [Analysis](#analysis)
   - [Design](#design)
   - [Realisation](#realisation)
@@ -35,16 +36,15 @@ Individuals interested in learning about other cultures, educators, cultural org
 Possible sub-questions:
 
 • What are the key factors that promote authentic and respectful cultural exchange?
-
 • How can the app provide an engaging and educational platform for cultural exchange?
-
 • How can we ensure user privacy and security within the app's design?
-
 • How can we incentivise user engagement with the app over time?
 
 Do's:
 
-• Document and test at least three competitor apps/mobile solutions. • User experience must be intuitive, customizable, and easy to use. • Prioritize user privacy and security in the app's design.
+• Document and test at least three competitor apps/mobile solutions.
+• User experience must be intuitive, customizable, and easy to use.
+• Prioritize user privacy and security in the app's design.
 
 ## Problem definition
 
@@ -54,20 +54,26 @@ Within different cultures there are major differences in the method of communica
 
 ### Questions
 
-Leading question:
+The original main research question is formulated as follows:
 
 > How can a mobile app effectively promote cultural exchange and understanding among users from different countries?
 
 The problem with this question is that it is both not measurable, time-bound nor is it concrete enough. What does 'effectively' mean? What does 'understanding' in this context precisely encompass? With these constrains in mind a new question was formulated.
 
-> How can a mobile app facilitate in closing the barrier between cultures and languages using aiding features such as text-based translations, indicators languages/cultures.
+> How can a mobile app facilitate in closing the barrier between cultures and languages using aiding features such as text-based translations, indicators languages/cultures?
 
 This is a lot better because it is more specific, yet we are missing a concise and clear target audience as well as a period of time to bind the question to.
 
-> How can we develop a mobile app in 3 weeks that can effectively utilize text-based translations and cultural indicators to bridge cultural and language gaps among international travelers.
+> How can we develop a mobile app in 3 weeks that can effectively utilize translations and cultural indicators to bridge cultural and language gaps among international travelers?
 
-- 3 weken
-- Met als doel om binnen zoveel weken significate verbetering te zien
+Why is this question 'correct'? It's probably not, however this is generic enough to provide space for creativity, it is measurable, time-bound and specific to a single target audience. Hence we accept this question moving forward. Explanation for the selected specifics is as such:
+
+- International travelers
+  - These users are more prone to be confronted with different cultures and are more than ever dependant on successful communication.
+- 3 Weeks
+  - This is the duration in which this specific project has to be completed, the learning curve of improving communication is a proces of iteration and thus cannot have a definite end.
+
+### Potential solutions
 
 ## Analysis
 
@@ -79,4 +85,5 @@ This is a lot better because it is more specific, yet we are missing a concise a
 
 ### Useful links
 
-[ICT research methods](http://ictresearchmethods.nl/methods-per-project-phase/)
+- [ICT research methods](http://ictresearchmethods.nl/methods-per-project-phase/)
+- [CMD Methods](https://cmdmethods.nl/?sort=strategy)
