@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:s4_cultural_exchange/pages/home.dart';
+import 'package:s4_cultural_exchange/pages/statistics.dart';
 
 void main() {
   runApp(MyApp());
