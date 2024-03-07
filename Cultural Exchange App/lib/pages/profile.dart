@@ -21,7 +21,7 @@ class ProfilePage extends StatelessWidget {
               icon: const Icon(Icons.arrow_back_ios),
               iconSize: 36,
               onPressed: () {
-                context.pop("profile");
+                context.pop();
               },
               color: theme.colorScheme.primary,
             )),

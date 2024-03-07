@@ -32,7 +32,7 @@ class NavigationFooter extends StatelessWidget {
                 ? selectedIconSize
                 : defaultIconSize,
             onPressed: () {
-              context.go("/courses");
+              context.push("/courses");
             },
             color: theme.colorScheme.primary,
           ),

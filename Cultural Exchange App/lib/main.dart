@@ -15,54 +15,15 @@ final _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      pageBuilder: (context, state) => CustomTransitionPage<void>(
-        key: state.pageKey,
-        child: StatisticsPage(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-            SlideTransition(
-          position: animation.drive(
-            Tween<Offset>(
-              begin: const Offset(0, -0.8),
-              end: Offset.zero,
-            ).chain(CurveTween(curve: Curves.easeOutSine)),
-          ),
-          child: child,
-        ),
-      ),
-    ),
-    GoRoute(
-      path: '/courses',
-      pageBuilder: (context, state) => CustomTransitionPage<void>(
-        key: state.pageKey,
-        child: CoursesPage(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-            SlideTransition(
-          position: animation.drive(
-            Tween<Offset>(
-              begin: const Offset(-0.8, 0),
-              end: Offset.zero,
-            ).chain(CurveTween(curve: Curves.easeOutSine)),
-          ),
-          child: child,
-        ),
-      ),
+      builder: (context, state) => StatisticsPage(),
     ),
     GoRoute(
       path: '/profile',
-      pageBuilder: (context, state) => CustomTransitionPage<void>(
-        key: state.pageKey,
-        child: ProfilePage(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-            SlideTransition(
-          position: animation.drive(
-            Tween<Offset>(
-              begin: const Offset(0.8, 0),
-              end: Offset.zero,
-            ).chain(CurveTween(curve: Curves.easeOutSine)),
-          ),
-          child: child,
-        ),
-      ),
+      builder: (context, state) => ProfilePage(),
+    ),
+    GoRoute(
+      path: '/courses',
+      builder: (context, state) => CoursesPage(),
     ),
   ],
 );
