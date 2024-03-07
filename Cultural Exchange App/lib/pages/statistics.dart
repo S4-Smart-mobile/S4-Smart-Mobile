@@ -15,6 +15,7 @@ class StatisticsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: theme.colorScheme.background,
         toolbarHeight: 80,
         title: Padding(
