@@ -4,7 +4,6 @@
 
 - [Duo app 24: Cultural Exchange](#duo-app-24-cultural-exchange)
   - [Overview](#overview)
-  - [Introduction](#introduction)
   - [Canvas instruction](#canvas-instruction)
   - [Previous problem](#previous-problem)
   - [Analysis](#analysis)
@@ -12,9 +11,8 @@
   - [Design](#design)
     - [Color palette](#color-palette)
     - [Version I](#version-i)
+    - [Version II](#version-ii)
     - [Useful links](#useful-links)
-
-## Introduction
 
 ## Canvas instruction
 
@@ -168,8 +166,51 @@ We received some useful feedback from Marcel. He suggested the following things
 - Consistency in margin/padding -> A more professional and consistent feel can lead to a more pleasant experience.
 - Make it more clear what IS and ISN'T a button.
 
+### Version II
+
+- [Version 2 - app design](../static/design-iteration-2.pdf)
+
+Using the feedback previously received a few choices were made.
+
+- We implemented a header on every screen indicating what screen they were on.
+- A new secondary color was chosen to improve contrast.
+
+<table>
+  <tr>
+    <td>Blurple</td>
+    <td style="background-color:#4E47C6; width:50px; height:50px;"></td>
+    <td>#4E47C6</td>
+  </tr>
+</table>
+
+Was turned into ->
+
+<table>
+  <tr>
+    <td>Blue</td>
+    <td style="background-color:#140CA7; width:50px; height:50px;"></td>
+    <td>#140CA7</td>
+  </tr>
+</table>
+
+![Color palette](../static/img/color-palette-2.png)
+
+- Padding/margins were standardized. Examples are that all page content (excluding header/footer) had a side-padding of 32. _(With exceptions for things such as dividers.)_
+
+With these changes implemented we think the app has had a significant improvement to the user' experience.
+
+![App showcase](../static/img/cultural-exchange-app-showcase.gif)[^1]
+
+<div align="center">
+  <img src='../static/img/courses-v2.jpg' alt="V2 of the courses page" width=315 height=700>
+  <img src='../static/img/profile-v2.jpg' alt="V2 of the profile page" width=315 height=700>
+  <img src='../static/img/statistics-v2.jpg' alt="V2 of the statistics page" width=315 height=700>
+</div>
+
 ### Useful links
 
 - [ICT research methods](http://ictresearchmethods.nl/methods-per-project-phase/)
 - [CMD Methods](https://cmdmethods.nl/?sort=strategy)
 - [Color theory](https://www.canva.com/colors/color-wheel/)
+
+[^1]: The weird 'gray-scale' effect visible on the header is an artifact of a missed property. This has been fixed in the current version of the app.
