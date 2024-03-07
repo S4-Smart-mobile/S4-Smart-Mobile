@@ -15,6 +15,7 @@ class ProfilePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         leading: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32),
             child: IconButton(

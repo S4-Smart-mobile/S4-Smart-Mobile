@@ -16,6 +16,7 @@ class CoursesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        scrolledUnderElevation: 0,
         backgroundColor: theme.colorScheme.background,
         toolbarHeight: 80,
         title: Padding(
