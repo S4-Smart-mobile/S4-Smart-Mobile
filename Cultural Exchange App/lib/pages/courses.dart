@@ -3,6 +3,7 @@ import 'package:s4_cultural_exchange/classes/courses.dart';
 import 'package:s4_cultural_exchange/widgets/course-widget.dart';
 import 'package:s4_cultural_exchange/widgets/custom-searchbar.dart';
 import 'package:s4_cultural_exchange/widgets/not-unlocked-widget.dart';
+import 'package:s4_cultural_exchange/widgets/navigation_footer.dart';
 
 class CoursesPage extends StatelessWidget {
   @override
@@ -89,6 +90,8 @@ class CoursesPage extends StatelessWidget {
             ),
           ),
         ],
+      bottomNavigationBar: const NavigationFooter(
+        widgetType: WidgetType.courses,
       ),
     );
   }
