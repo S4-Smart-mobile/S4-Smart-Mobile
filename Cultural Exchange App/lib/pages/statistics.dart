@@ -1,38 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:s4_cultural_exchange/widgets/statistics/footer.dart';
-import 'package:s4_cultural_exchange/widgets/statistics/new-signs.dart';
+import 'package:s4_cultural_exchange/widgets/statistics/daily_sign.dart';
+import 'package:s4_cultural_exchange/widgets/navigation_footer.dart';
+import 'package:s4_cultural_exchange/widgets/statistics/new_signs.dart';
+import 'package:s4_cultural_exchange/widgets/statistics/progress_graph.dart';
 import 'package:s4_cultural_exchange/widgets/statistics/streak.dart';
+
+const horizontalPadding = 16.00;
 
 class StatisticsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final boldYellowText = GoogleFonts.roboto(
-        textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 24,
-      color: theme.colorScheme.primary,
-    ));
-    final boldNavyText = GoogleFonts.roboto(
-        textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 24,
-      color: theme.colorScheme.background,
-    ));
-    final boldPurpleText = GoogleFonts.roboto(
-        textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 24,
-      color: theme.colorScheme.secondary,
-    ));
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: theme.colorScheme.background,
         toolbarHeight: 80,
         title: Padding(
-          padding: const EdgeInsets.fromLTRB(76, 32, 32, 32),
+          padding: const EdgeInsets.symmetric(horizontal: 32),
           child: Text(
             'Welcome Andrés',
             style: GoogleFonts.roboto(
@@ -51,20 +37,27 @@ class StatisticsPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
         ),
         child: const SingleChildScrollView(
-          padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
+          padding:
+              EdgeInsets.fromLTRB(horizontalPadding, 16, horizontalPadding, 16),
           child: Column(
             children: [
-              SizedBox(height: 16),
+              Divider,
               StreakWidget(streak: 38),
-              SizedBox(height: 16),
+              Divider,
+              SignOfTheDay(text: "F U C K"),
+              Divider,
               LearnedWidget(newSigns: 17),
+              Divider,
+              ProgressGraph()
             ],
           ),
         ),
       ),
-      bottomNavigationBar: FooterWidget(
-        widgetType: WidgetType.Statistics,
+      bottomNavigationBar: const NavigationFooter(
+        widgetType: WidgetType.statistics,
       ),
     );
   }
 }
+
+const Divider = SizedBox(height: 16);

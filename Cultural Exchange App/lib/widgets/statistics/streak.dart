@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class StreakWidget extends StatelessWidget {
   final int streak;
 
-  const StreakWidget({Key? key, required this.streak}) : super(key: key);
+  const StreakWidget({super.key, required this.streak});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +21,7 @@ class StreakWidget extends StatelessWidget {
         color: theme.colorScheme.background,
         borderRadius: BorderRadius.circular(5),
       ),
+      constraints: const BoxConstraints(minWidth: double.infinity),
       padding: const EdgeInsets.all(8),
       child: Text(
         'Keep your $streak day streak!',
