@@ -20,7 +20,7 @@ class StatisticsPage extends StatelessWidget {
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
           child: Text(
-            'Welcome Andrés',
+            'Welcome András',
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
               fontWeight: FontWeight.bold,
