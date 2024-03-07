@@ -8,9 +8,14 @@ class CourseWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Container(
       height: 100,
-      color: Color(0xFFFAB440),
+      decoration: BoxDecoration(
+        color: theme.colorScheme.primary,
+        borderRadius: BorderRadius.circular(15),
+      ),
       padding: EdgeInsets.all(16),
       margin: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
