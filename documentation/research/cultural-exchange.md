@@ -64,7 +64,7 @@
     - 3 weeks
       - This is the duration in which this specific project has to be completed, the learning curve of improving communication is a proces of iteration and thus cannot have a definite end.
 
-However it was found rather difficult to get a start on this project, therefore it was decided to go back to the white-board and create a new idea, leading/sub-questions and problem definition.
+However it was found rather difficult to get a start on this project, therefore it was decided to go back to the white-board and create a new idea and problem definition.
 
 ## Analysis
 
@@ -76,7 +76,7 @@ Within different cultures there are major differences in the method of communica
 
 To aid the formation of a proper problem definition help was provided by a classmate, [Chantal Maas](https://www.linkedin.com/in/chantal-maas-605aa22a4/). One example of this is the mindmap which was created.
 
-```Mermaid
+```mermaid
 mindmap
   )Cultural Differences(
     (People)
@@ -91,6 +91,8 @@ mindmap
       Signing
       Spoken
 ```
+
+_If the image does not generate, please view [here](https://mermaid.ink/img/pako:eNo9j8FqwzAMhl_F6JRCnyDXtNDDDoOyy_BFsxVXNJaNI8NG6bvPoXFv-vSL70cPcMkTjBBZfMRsxZjDVBetBRdz4nmmQuJoHbbEmOGTUl7o8CIzJRFyykn2xQV_WNcdznpj12Fakt5op-FLPJVVUTxL6DZz_s3NhpuvH36ghIrh3dgqq2jhbjLmykGa5I053UngCJFKRPbtt8eWWWj1kSyMbfRY7hasPNsdVk3XP3Ewaql0hJo9Kp0YQ8EI44zL2rYZ5Tulzs9_kJ9kVg?type=png)_
 
 An idea to create an application was fostered by this. What is a way to learn more about cultures, communication & language in a fun & interactive way?
 
@@ -122,34 +124,12 @@ However the apps have a problem, their UIs are bland, not unique and very seriou
 ### Color palette
 
 To stand out more from other applications we have chosen a more bright color palette. These colours have not been spotted to be associated with other language/signing apps. Thus we would use this to stand out.
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Color</th>
-    <th>Hex Code</th>
-  </tr>
-  <tr>
-    <td>Yellow</td>
-    <td style="background-color:#FAB440; width:50px; height:50px;"></td>
-    <td>#FAB440</td>
-  </tr>
-  <tr>
-    <td>Blurple</td>
-    <td style="background-color:#4E47C6; width:50px; height:50px;"></td>
-    <td>#4E47C6</td>
-  </tr>
-  <tr>
-    <td>Navy</td>
-    <td style="background-color:#07143F; width:50px; height:50px;"></td>
-    <td>#07143F</td>
-  </tr>
-  <tr>
-    <td>Pink</td>
-    <td style="background-color:#D90368; width:50px; height:50px;"></td>
-    <td>#D90368</td>
-  </tr>
-</table>
+Title | Color | Hex Code
+----- | ----- | --------
+Yellow | ![#FAB440](https://via.placeholder.com/15/FAB440/000000?text=+) | #FAB440
+Blurple | ![#4E47C6](https://via.placeholder.com/15/4E47C6/000000?text=+) | #4E47C6
+Navy | ![#07143F](https://via.placeholder.com/15/07143F/000000?text=+) | #07143F
+Pink | ![#D90368](https://via.placeholder.com/15/D90368/000000?text=+) | #D90368
 
 These colours are a combination of both warm and cold tints in an attempt to create a balanced palette. The contrast is high enough that they are distinguishable from one another.
 
@@ -168,36 +148,20 @@ We received some useful feedback from Marcel. He suggested the following things
 
 ### Version II
 
-- [Version 2 - app design](../static/design-iteration-2.pdf)
+[Version 2 - app design](../static/design-iteration-2.pdf)
 
 Using the feedback previously received a few choices were made.
 
 - We implemented a header on every screen indicating what screen they were on.
 - A new secondary color was chosen to improve contrast.
 
-<table>
-  <tr>
-    <td>Blurple</td>
-    <td style="background-color:#4E47C6; width:50px; height:50px;"></td>
-    <td>#4E47C6</td>
-  </tr>
-</table>
-
-Was turned into ->
-
-<table>
-  <tr>
-    <td>Blue</td>
-    <td style="background-color:#140CA7; width:50px; height:50px;"></td>
-    <td>#140CA7</td>
-  </tr>
-</table>
+![#4E47C6](https://via.placeholder.com/15/4E47C6/000000?text=+) was changed into ![#140CA7](https://via.placeholder.com/15/140CA7/000000?text=+)
 
 ![Color palette](../static/img/color-palette-2.png)
 
-- Padding/margins were standardized. Examples are that all page content (excluding header/footer) had a side-padding of 32. _(With exceptions for things such as dividers.)_
+- Padding/margins were standardized. Examples are that all page content had a side-padding of 32. _(With exceptions for things such as dividers as these are always an entire page wide.)_ With these changes implemented we think the app has had a significant improvement to the user' experience.
 
-With these changes implemented we think the app has had a significant improvement to the user' experience.
+To showcase the app's implementation of these designs, please view the following screenshots accompanied by a gif of a walkthrough of the app.
 
 ![App showcase](../static/img/cultural-exchange-app-showcase.gif)[^1]
 

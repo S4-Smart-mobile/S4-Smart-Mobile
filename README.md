@@ -18,12 +18,13 @@ This document serves as the handlebars for finding your way around this _~~mess~
 
 - [Semester 4: 'Joris & Morris' organization](https://github.com/S4-Smart-mobile)
 - [Duo case 24: 'Cultural Exchange'](https://google.com)
+- [Research document](./documentation/research/cultural-exchange.md)
 
 ## Getting started
 
-1. Follow [Flutter's getting started](https://docs.flutter.dev/get-started/install) guide all the way up until you've got a working version of Flutter on your selected devices.
+1. Follow [Flutter's getting started](https://docs.flutter.dev/get-started/install) guide all the way up until you've got a working version of Flutter on the device of your choice.
 2. Open a terminal in the working directory.
-3. Run `bash flutter devices` to see the available devices. A device id should be visible the 2nd column.
-4. Run 3. Run `bash flutter run -d {DEVICE_ID}`.
-5. Open the app on the phone/emulator.
+3. Run `flutter devices` to see the available devices. A device id should be visible the 2nd column.
+4. Run `flutter run -d {DEVICE_ID}`.
+5. Open the app on the device.
 6. Enjoy!
