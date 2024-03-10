@@ -139,7 +139,7 @@ These colours are a combination of both warm and cold tints in an attempt to cre
 
 [Version 1 - app design](../static/design-iteration-1.pdf)
 
-We received some useful feedback from Marcel. He suggested the following things
+We received some useful feedback from Erik. He suggested the following things
 
 - Less is more -> Creating more room creates more peace in the mind.
 - Remember the context of the app -> A user is not stupid and KNOWS what app it's using.
