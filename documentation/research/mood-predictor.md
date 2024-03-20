@@ -11,7 +11,12 @@
     - [Define](#define)
       - [1. What data visualization methods would be effective in helping users understand mood trends/patterns?](#1-what-data-visualization-methods-would-be-effective-in-helping-users-understand-mood-trendspatterns)
       - [2. How can we minimize the impact on user' daily routines yet still effectively track moods?](#2-how-can-we-minimize-the-impact-on-user-daily-routines-yet-still-effectively-track-moods)
-      - [3. What features are essential to help user's track their mood?](#3-what-features-are-essential-to-help-users-track-their-mood)
+        - [Passive data collection](#passive-data-collection)
+        - [Scheduled prompts/notifications](#scheduled-promptsnotifications)
+        - [Home-screen widgets](#home-screen-widgets)
+        - [Calender synchronization](#calender-synchronization)
+        - [Conclusion](#conclusion)
+      - [3. What features are essential to help predict a user' mood?](#3-what-features-are-essential-to-help-predict-a-user-mood)
       - [4. How can we make the app customizable yet to a user's needs without overloading it with features?](#4-how-can-we-make-the-app-customizable-yet-to-a-users-needs-without-overloading-it-with-features)
     - [Ideate](#ideate)
     - [Prototype](#prototype)
@@ -63,44 +68,24 @@ To keep the scope of the project precise, maintainable and specific the followin
 
 #### Personas
 
-| **Attribute**  | **Details**                                                                           |
-| -------------- | ------------------------------------------------------------------------------------- |
-| _Image_        | ![Boris himself](https://cdn.pixabay.com/photo/2020/05/10/15/52/man-5154583_1280.jpg) |
-| _Name_         | Boris Hendrix                                                                         |
-| _Sex_          | Male                                                                                  |
-| _Age_          | 24                                                                                    |
-| _Occupation_   | Mental health coach                                                                   |
-| _Background_   | Studied psychology                                                                    |
-| _Frustrations_ | - Balancing his own mental health parallel to his job.                                |
-|                | - Being uncertain and how his clients will make him feel.                             |
-|                | - Finds it difficult to keep track of his own mood.                                   |
-|                |                                                                                       |
-| _Motivations_  | - Wants to help others improve their mental health.                                   |
-|                | - Personal fulfillment by helping other individuals.                                  |
-|                | - Continue to improve his personal mental health management.                          |
-|                |                                                                                       |
-| _Preferences_  | - Values his privacy and wants control over his data.                                 |
-|                | - Wants to gain insights into patterns associated with his data.                      |
-
----
-
-| **Attribute**  | **Details**                                                                              |
-| -------------- | ---------------------------------------------------------------------------------------- |
-| _Image_        | ![Katie herself](https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg)     |
-| _Name_         | Katie Acker                                                                              |
-| _Sex_          | Female                                                                                   |
-| _Age_          | 17                                                                                       |
-| _Occupation_   | Full-time social work student                                                            |
-| _Background_   | Part of the student's committee                                                          |
-| _Frustrations_ | - Feeling overwhelmed with all the work she has to do for both school and the committee. |
-|                | - Struggling to find time for self-care in her schedule.                                 |
-|                |                                                                                          |
-| _Motivations_  | - Has a passion for fighting against inequality.                                         |
-|                | - Wants to engage her community and improve open dialogue sessions.                      |
-|                | - Likes to embrace challenges as opportunities for growth.                               |
-|                |                                                                                          |
-| _Preferences_  | - Wants something flexible to fill the gaps in between her busy schedules.               |
-|                | - Prefers being able to share data as to ease collaboration and teamwork.                |
+| **Attribute**  | **Boris Hendrix**                                                                                        | **Katie Acker**                                                                                         |
+| -------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| _Image_        | <img src="https://cdn.pixabay.com/photo/2020/05/10/15/52/man-5154583_1280.jpg" width="400" height="650"> | <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg" width="500" height="300"> |
+| _Name_         | Boris Hendrix                                                                                            | Katie Acker                                                                                             |
+| _Sex_          | Male                                                                                                     | Female                                                                                                  |
+| _Age_          | 24                                                                                                       | 17                                                                                                      |
+| _Occupation_   | Mental health coach                                                                                      | Full-time social work student                                                                           |
+| _Background_   | Studied psychology                                                                                       | Part of the student's committee                                                                         |
+| _Frustrations_ | - Balancing his own mental health parallel to his job.                                                   | - Feeling overwhelmed with all the work she has to do for both school and the committee.                |
+|                | - Being uncertain and how his clients will make him feel.                                                | - Struggling to find time for self-care in her schedule.                                                |
+|                | - Finds it difficult to keep track of his own mood.                                                      |                                                                                                         |
+|                |                                                                                                          |                                                                                                         |
+| _Motivations_  | - Wants to help others improve their mental health.                                                      | - Has a passion for fighting against inequality.                                                        |
+|                | - Personal fulfillment by helping other individuals.                                                     | - Wants to engage her community and improve open dialogue sessions.                                     |
+|                | - Continue to improve his personal mental health management.                                             | - Likes to embrace challenges as opportunities for growth.                                              |
+|                |                                                                                                          |                                                                                                         |
+| _Preferences_  | - Values his privacy and wants control over his data.                                                    | - Wants something flexible to fill the gaps in between her busy schedules.                              |
+|                | - Wants to gain insights into patterns associated with his data.                                         | - Prefers being able to share data as to ease collaboration and teamwork.                               |
 
 #### Survey
 
@@ -146,16 +131,65 @@ Note for table above[^3]
 | _Line graph_       |  ![Check](https://i.stack.imgur.com/G4dGO.png)  | ![Check](https://i.stack.imgur.com/G4dGO.png)  | ![Check](https://i.stack.imgur.com/G4dGO.png) | ![Check](https://i.stack.imgur.com/G4dGO.png) |
 | _Radar chart_      |  ![Cross](https://i.stack.imgur.com/w0Zjv.png)  | ![Check](https://i.stack.imgur.com/G4dGO.png)  | ![Cross](https://i.stack.imgur.com/w0Zjv.png) | ![Cross](https://i.stack.imgur.com/w0Zjv.png) |
 
+For the visualizations it might be most useful to use 'plain-old' line graphs. As these are most flexible, recognizable, specific enough (decimals) and work for both long- and short-term data visualization.
+
 #### 2. How can we minimize the impact on user' daily routines yet still effectively track moods?
 
-There are a few options to gain data from a user to track their moods without interrupting their daily routines:
+There are a few options to gain data from a user to track their moods without interrupting their daily routines, next to this the application will have the ability to track moods in-app.
 
 - Passive data collection
 - Schedules prompts
-- Quick inputs
-- Synchronize based on calender
+- Home-screen widgets
+- Calender synchronization
 
-#### 3. What features are essential to help user's track their mood?
+##### Passive data collection
+
+Passively collecting data through means such as smartphone sensors, location data or wearables to detect mood changes using physical methods such as heart rate monitoring, detecting movement patterns etc. without requiring further input from a user.
+
+| Benefits                    | Drawbacks        |
+| --------------------------- | ---------------- |
+| Requires minimal input      | Privacy concerns |
+| Continuous data integration | Inaccuracy       |
+|                             |                  |
+
+##### Scheduled prompts/notifications
+
+Allows users to sign up for schedules prompts/notifications at strategic times (breakfast, lunch, dinner, before bed etc.) throughout the day to input their current mood.
+
+| Benefits                           | Drawbacks                         |
+| ---------------------------------- | --------------------------------- |
+| Record data at intervals           | Can be seen as annoying/intrusive |
+| Customizable to a person' schedule | Requires active participation     |
+|                                    | Inconsistent tracking             |
+|                                    |                                   |
+
+##### Home-screen widgets
+
+Create customizable home-screen widgets that allow a user to on-the-go track their mood with a simple click.
+
+| Benefits                   | Drawbacks                            |
+| -------------------------- | ------------------------------------ |
+| Quick and intuitive inputs | Limited specificity/details in moods |
+| Reduced cognitive load     |                                      |
+| Easy usage                 |                                      |
+|                            |                                      |
+
+##### Calender synchronization
+
+Create time-slots within the free/designated spots of a user's calender allowing for scheduled and consistent tracking.
+
+| Benefits                 | Drawbacks                                               |
+| ------------------------ | ------------------------------------------------------- |
+| Gain calender context    | Requires an up-to-date and specific calender            |
+| Consistent and scheduled | Requires access to entire calender, privacy concerns    |
+|                          | May not integrate properly and be perceived as annoying |
+|                          |                                                         |
+
+##### Conclusion
+
+So what is the best option for perceiving data from a user? With regard to the [survey's results](../interviews-surveys/mood-mental-health-survey.md#surveys-questions-overview) it seems that data privacy is a major concern, leading to both 'passive' and 'calender' options not being viable.
+
+#### 3. What features are essential to help predict a user' mood?
 
 #### 4. How can we make the app customizable yet to a user's needs without overloading it with features?
 
