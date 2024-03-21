@@ -89,46 +89,68 @@ Imagine there exists an accurate mood prediction mobile app. This app can predic
 
 ```mermaid
 pie
-"Sad": 1
-"Calm": 1
+"Sad": 2
+"Tired": 1
+"Depends on the situation, frustrating or calm.": 1
+"Calm": 9
+"Excited": 1
+"Empty": 1
+"DOESNT AFFECT MY MOOD": 1
 ```
 
 ### When I don't sleep well I often feel
 
 ```mermaid
 pie
+"Angry": 1
 "Nervous": 1
-"Tired": 1
+"Anxious": 1
+"Tired": 10
+"Annoyed": 2
 ```
 
 ### When I visit family I often feel
 
 ```mermaid
 pie
+"Tired": 2
 "Tired but also happy": 1
-"Happy": 1
+"sometimes irritated and sometimes happy": 1
+"Excited": 2
+"Bored": 1
+"Calm": 1
+"Happy": 8
 ```
 
 ### When I see my friends, I often feel
 
 ```mermaid
 pie
-"Excited": 1
-"Happy": 1
+"Excited": 7
+"Happy": 7
+"Tired": 1
+"Calm": 1
 ```
 
 ### To make sure you are paying attention, select 'sad'
 
 ```mermaid
 pie
-"Sad": 2
+"Sad": 11
+"Variations of 'sad'": 4
+"Angry": 1
 ```
 
 ### The days I have to work, I often feel
 
 ```mermaid
 pie
-"Calm": 2
+"Calm": 6
+"Tired": 3
+"Sad": 2
+"Excited": 1
+"Stressed": 2
+"Happy": 2
 ```
 
 ### When watching the news, I often feel
@@ -136,43 +158,66 @@ pie
 ```mermaid
 pie
 "Nothing much tbh": 1
-"Calm": 1
+"Anxious": 1
+"Angry": 1
+"Depends on what kind of news they show": 1
+"Calm": 4
+"Bored": 1
+"Sad": 3
+"Don't watch news": 1
+"Tired": 1
 ```
 
 ### When I can work on my hobbies, I often feel
 
 ```mermaid
 pie
-"Excited": 1
-"Happy": 1
+"Excited": 5
+"Happy": 8
+"Calm": 3
 ```
 
 ### Going shopping often makes me feel
 
 ```mermaid
 pie
-"Tired": 2
+"Tired": 3
+"Excited": 6
+"Happy": 2
+"Calm": 3
+"Bored": 1
+"Anxious": 1
 ```
 
 ### Exercising often makes me feel
 
 ```mermaid
 pie
-"Happy": 2
+"Happy": 6
+"Excited": 3
+"Tired": 3
+"Anxious": 1
+"Calm": 3
 ```
 
 ### After gaming, I often feel
 
 ```mermaid
 pie
-"Calm": 2
+"Calm": 5
+"Tired": 3
+"Sad": 1
+"Excited": 2
+"Happy": 4
+"Satisfied": 1
 ```
 
 ### Which scenario would you prefer?
 
 ```mermaid
 pie
-"Short surveys": 2
+"Short surveys": 7
+"Long surveys": 9
 ```
 
 ### How likely are you to use such an app, assuming its predictions are at least +- 70% accurate?
@@ -180,21 +225,38 @@ pie
 ```mermaid
 xychart-beta
     x-axis [Very_unlikely, Unlikely, Neutral, Likely, Very_likely]
-    y-axis "Count"
-    bar [0, 0, 2, 0 ,0]
+    y-axis "Count" 0 --> 7
+    bar [5, 2, 5, 4]
 ```
 
 ### What other factors do you believe could influence your mood that the app should consider?
 
-    Insert summary
+- mood's of other people
+- Mood fluctuations due to age (teens, for example have more severe mood swings than 24+ people), mental disorders
+- if its to many administration or adds then i will get tired and angry
+- weather, sleep, personality
+- If I got enough sleep and had enough to eat or not
+- Bier
+- Music
+- Diet, mental health issues that can cause mood swings, periods (can also cause mood swings)
+- Quality of sleep, time of day
+- Bad drivers
+- memes
+- Greater life events, kinda hard to actually implement though
+- General life philosophy
+- Situational disparity (so wether the situation is a lot different than normal, I feel like absolutes would lead to inaccurate results)
+- I mean sometimes people look forward to doing something right? Like they are excited to go somewhere this weekend or something. Sometimes that can get you through your week. Idk tho
+- Social interactions throughout the day
+- No suggestions
+- Schooldays, partner, parents (I know you said family, but maybe add something so you can choose what to track? Cause some people don’t have work, yet, or don’t see family much and then schooldays and family would be confronting perhaps)
 
 ### How likely are you to trust the predictions made by the app?
 
 ```mermaid
 xychart-beta
     x-axis [Very_unlikely, Unlikely, Neutral, Likely, Very_likely]
-    y-axis "Count"
-    bar [0, 2, 0 ,0 ,0]
+    y-axis "Count" 0 --> 9
+    bar [3, 7, 4 ,2 ]
 ```
 
 ### How important is real-time mood tracking to you?
@@ -202,16 +264,17 @@ xychart-beta
 ```mermaid
 xychart-beta
     x-axis [Very_unlikely, Unlikely, Neutral, Likely, Very_likely]
-    y-axis "Count"
-    bar [0, 1, 1 ,0 ,0]
+    y-axis "Count" 0 --> 8
+    bar [5, 6, 2 ,1 ,2]
 ```
 
 ### Would you want the app to provide insights or suggestions for improving your mood based on the predicted emotional state?
 
 ```mermaid
 pie
-"Yes": 1
-"No": 0
+"Yes": 13
+"No": 2
+"Other": 1
 ```
 
 Other: "I'd rather see how far away you are from your average mood, since general advice doesn't necessarily apply to the vast majority of people (especially when the advice is along the lines of "you're sad :(get happy by engaging in your hobbies :D", which is, imo, too generic)."
@@ -221,6 +284,6 @@ Other: "I'd rather see how far away you are from your average mood, since genera
 ```mermaid
 xychart-beta
     x-axis [Very_unlikely, Unlikely, Neutral, Likely, Very_likely]
-    y-axis "Count"
-    bar [0, 1, 1 ,0 ,0]
+    y-axis "Count" 0 --> 8
+    bar [3, 3, 6 ,3 ,1]
 ```
