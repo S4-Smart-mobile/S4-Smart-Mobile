@@ -22,6 +22,7 @@
       - [4. How can we make the app customizable yet to a user's needs without overloading it with features?](#4-how-can-we-make-the-app-customizable-yet-to-a-users-needs-without-overloading-it-with-features)
     - [Ideate](#ideate)
       - [Brainstorming](#brainstorming)
+      - [Competitor apps](#competitor-apps)
     - [Prototype](#prototype)
     - [Test](#test)
   - [External links](#external-links)
@@ -204,6 +205,8 @@ So what is the best option for perceiving data from a user? With regard to the [
 
 To ideate we have chosen to first start with a conventional brainstorming session to work out the most default answers, after which we are planning to use an ideation framework we have not used before.
 
+To start we did a simple brainstorming session in the form of a mindmap to get our brains going.
+
 #### Brainstorming
 
 ```mermaid
@@ -221,8 +224,8 @@ root)Moods(
     verleden
     toekomst
     nu
-  humeur
   gevoelens
+    humeur
     grappig
     empatie
     boos
@@ -243,6 +246,26 @@ root)Moods(
     vrienden
     familie
 ```
+
+After which we created a basic storyboard to get a more general overview of functionality and looks of the application.
+
+<div align="left">
+  <img src='../static/img/storyboard-1.jpeg' alt="Story board images" width=315 height=700>
+  <img src='../static/img/storyboard-2.jpeg' alt=""Story board images" width=315 height=700>
+  <img src='../static/img/storyboard-overview.jpeg' alt="Story board images" width=315 height=700>
+</div>
+
+#### Competitor apps
+
+</div>
+
+|                        | MoodMe: Relationship Mood App                                                                                                                                                                                                                                                                                                              | Daylio Journal - Mood Tracker                                                                                                                                                                                                                                                                                                       | Mood Patterns                                                                                                                                                                                                                                                                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                        | <div align="center"> <img src='https://play-lh.googleusercontent.com/RMcPctjZePcK-ZIxHPh9m0vdpadO8Rbn7_e13OQ_X2nx3VWwKoT-yPcDWcARyUUBPyyi=w2560-h1440' width=350 height=700> <img src='https://play-lh.googleusercontent.com/xM1-aDeE8Asm6meENniFsCVCFCEn8o3_UdbxfFCx4UIu8XsP7G4FDC4EfuFmz6eRbcI=w2560-h1440' width=350 height=700> </div> | <div align="center"> <img src='https://play-lh.googleusercontent.com/EtO67YoF-0kAN6W6mN1QoQ81CbeW4TZgq-zAvJhoML1HxKhBIRqM_eHDmkp2jWbao1o=w2560-h1440' width=350 height=700> <img src='https://play-lh.googleusercontent.com/8HwKOlDv13b_ZCD-NUFqD_ByxAdqY25THWVYVhlfu-nqJwHWAKXN0xYZRSbOmnBlR-gE=w2560-h1440' width=350 height=700> | <div align="center"> <img src='https://play-lh.googleusercontent.com/scVacjLr7ordRI3Q5y5QlmN_DrUUUTy3jsdsdVYFyHaaW6a_VIvAnt5qcsMGk3bDaOs=w2560-h1440' width=350 height=700> <img src='https://play-lh.googleusercontent.com/VZSDRvsDc85DCIQ3nlWdyzHz6GR8jSVzQFnvoN4nUcfYQ8TZHUixuo2tBy5l9B3bl5JL=w2560-h1440' width=350 height=700> |
+| </div>                 |
+| Colors                 | Light themed with primarily blue accents                                                                                                                                                                                                                                                                                                   | Light themed with primarily green/blue accents                                                                                                                                                                                                                                                                                      | Gray-scale with various accents.                                                                                                                                                                                                                                                                                                    |
+| Potential improvements | Very busy application, Poor contrasts                                                                                                                                                                                                                                                                                                      | More consistent coloring , customization locked behind paywall                                                                                                                                                                                                                                                                      | Less bland UI, more identity & consistency                                                                                                                                                                                                                                                                                          |
+| Common/good features   | Very customizable                                                                                                                                                                                                                                                                                                                          | Consistent padding, intuitive & playful                                                                                                                                                                                                                                                                                             | Straight to the point UI, good at handling large volumes of data                                                                                                                                                                                                                                                                    |
 
 ### Prototype
 
