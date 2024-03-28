@@ -191,7 +191,31 @@ So what is the best option for perceiving data from a user? With regard to the [
 
 #### 3. What features are essential to help predict a user' mood?
 
+Essential features to implement to help predict our users mood in our application could be:
+
+1. User input:
+
+If a user is not yet known. So if he just downloaded the app we can't really predict a users mood. We can give some default recommendations on how most users feel them in common.
+
+2. Behavioral analysis:
+
+If a user downloads the app for the first time they can get welcomed by a series of short questions. And based on the response on these questions we can determine how the normally react on situations. So that a way how there mood can be predicted. This will get better overtime the more they use the app.
+
+3. Feedback mechanism
+
+Feedback is one off the best ways to impove.
+
 #### 4. How can we make the app customizable yet to a user's needs without overloading it with features?
+
+a few idea's we had to make an app customizable for a user but not overwhelming.
+
+1. dark - light theme
+
+its an easy thing to do but it can add so much to the experience of a user. Some people really prefer a dark mode in apps and it's a really easy thing to add so we really think this is a no brainer.
+
+2. Preference categories
+
+Preference categories is a way to really personalize an app without changing any features. In the app menu at the bottom or top of the screen a could make it so the icons are inner changeable so the can be at different places just like the home screens of phones. Where you can move around the apps to put them in there own space.
 
 ### Ideate
 
