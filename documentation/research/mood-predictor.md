@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD046 -->
+
 # Mood predictor
 
 ## Overview
@@ -10,7 +12,7 @@
       - [Survey](#survey)
     - [Define](#define)
       - [1. What data visualization methods would be effective in helping users understand mood trends/patterns?](#1-what-data-visualization-methods-would-be-effective-in-helping-users-understand-mood-trendspatterns)
-      - [2. How can we minimize the impact on user' daily routines yet still effectively track moods?](#2-how-can-we-minimize-the-impact-on-user-daily-routines-yet-still-effectively-track-moods)
+      - [2. How can we minimize the impact on user' daily routines yet still effectively predict moods?](#2-how-can-we-minimize-the-impact-on-user-daily-routines-yet-still-effectively-predict-moods)
         - [Passive data collection](#passive-data-collection)
         - [Scheduled prompts/notifications](#scheduled-promptsnotifications)
         - [Home-screen widgets](#home-screen-widgets)
@@ -19,6 +21,8 @@
       - [3. What features are essential to help predict a user' mood?](#3-what-features-are-essential-to-help-predict-a-user-mood)
       - [4. How can we make the app customizable yet to a user's needs without overloading it with features?](#4-how-can-we-make-the-app-customizable-yet-to-a-users-needs-without-overloading-it-with-features)
     - [Ideate](#ideate)
+      - [Brainstorming](#brainstorming)
+      - [Competitor apps](#competitor-apps)
     - [Prototype](#prototype)
     - [Test](#test)
   - [External links](#external-links)
@@ -91,12 +95,16 @@ To keep the scope of the project precise, maintainable and specific the followin
 
 In order to get a better overview of what our users REALLY encounter in both problems, potential solutions and preferences we have held a survey. You can find the questions, overview, results & other information [here](../interviews-surveys/mood-mental-health-survey.md#surveys-questions-overview).
 
+> However it was too inconclusive and generic to stimulate someone to think of a new idea. To manage this we've created a new, more direct survey with a clear path towards mood prediction over mood tracking.
+>
+> For this reason, we held another [survey](../interviews-surveys/mood-mental-health-survey-V2.md) to get a better view of which variables to track and associate with each mood, next to that we specifically asked user what they would like/dislike about a mood prediction app to get more direct answers.
+
 ### Define
 
 Many young adults struggle to manage their mental health on a day-to-day basis, facing challenges such as variable schedules & difficulty in understand their own mood habits. While some young adults maintain their mental health using more digital means such as music or gaming, others seek comfort in measures such as journaling or breathing exercises. However the clear problem with all these tools is the lack of customization and a high-effort/low-reward pattern. As actively keeping track of your mood/habits takes (too-) much time. Users seem to be looking for a tool that's intuitive in it's usage, takes a relatively small portion of the day to use & has customization options.
 
 1. What data visualization methods would be effective in helping users understand mood trends/patterns?
-2. How can we minimize the impact on user' daily routines yet still effectively track moods?
+2. How can we minimize the impact on user' daily routines yet still effectively predict moods?
 3. What features are essential to help user's track their mood?
 4. How can we make the app customizable yet to a user's needs without overloading it with features?
 
@@ -133,9 +141,9 @@ Note for table above[^3]
 
 For the visualizations it might be most useful to use 'plain-old' line graphs. As these are most flexible, recognizable, specific enough (decimals) and work for both long- and short-term data visualization.
 
-#### 2. How can we minimize the impact on user' daily routines yet still effectively track moods?
+#### 2. How can we minimize the impact on user' daily routines yet still effectively predict moods?
 
-There are a few options to gain data from a user to track their moods without interrupting their daily routines, next to this the application will have the ability to track moods in-app.
+There are a few options to gain data from a user to predict and track their moods without interrupting their daily routines, next to this the application will always have the ability to track/predict moods in-app.
 
 - Passive data collection
 - Schedules prompts
@@ -146,11 +154,11 @@ There are a few options to gain data from a user to track their moods without in
 
 Passively collecting data through means such as smartphone sensors, location data or wearables to detect mood changes using physical methods such as heart rate monitoring, detecting movement patterns etc. without requiring further input from a user.
 
-| Benefits                    | Drawbacks        |
-| --------------------------- | ---------------- |
-| Requires minimal input      | Privacy concerns |
-| Continuous data integration | Inaccuracy       |
-|                             |                  |
+| Benefits                    | Drawbacks                                                                                                                         |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Requires minimal input      | Privacy concerns                                                                                                                  |
+| Continuous data integration | Inaccuracy                                                                                                                        |
+|                             | [Not something users want](../interviews-surveys/mood-mental-health-survey-V2.md#how-important-is-real-time-mood-tracking-to-you) |
 
 ##### Scheduled prompts/notifications
 
@@ -218,6 +226,70 @@ its an easy thing to do but it can add so much to the experience of a user. Some
 Preference categories is a way to really personalize an app without changing any features. In the app menu at the bottom or top of the screen a could make it so the icons are inner changeable so the can be at different places just like the home screens of phones. Where you can move around the apps to put them in there own space.
 
 ### Ideate
+
+To ideate we have chosen to first start with a conventional brainstorming session to work out the most default answers, after which we are planning to use an ideation framework we have not used before.
+
+To start we did a simple brainstorming session in the form of a mindmap to get our brains going.
+
+#### Brainstorming
+
+```mermaid
+mindmap
+root)Moods(
+  lichaam
+    brein
+    comfort
+  omgeving
+    school
+      prestaties
+        stress
+    kantoor
+  voorspelbaarheid
+    verleden
+    toekomst
+    nu
+  gevoelens
+    humeur
+    grappig
+    empatie
+    boos
+    alleen
+      depressief
+        zelfmoord
+    geliefd
+      liefde
+  weer
+    zon
+      warm
+      koud
+      blij
+    regen
+      verdriet
+  mensen
+    partner
+    vrienden
+    familie
+```
+
+After which we created a basic storyboard to get a more general overview of functionality and looks of the application.
+
+<div align="left">
+  <img src='../static/img/storyboard-1.jpeg' alt="Story board images" width=315 height=700>
+  <img src='../static/img/storyboard-2.jpeg' alt=""Story board images" width=315 height=700>
+  <img src='../static/img/storyboard-overview.jpeg' alt="Story board images" width=315 height=700>
+</div>
+
+#### Competitor apps
+
+</div>
+
+|                        | MoodMe: Relationship Mood App                                                                                                                                                                                                                                                                                                              | Daylio Journal - Mood Tracker                                                                                                                                                                                                                                                                                                       | Mood Patterns                                                                                                                                                                                                                                                                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                        | <div align="center"> <img src='https://play-lh.googleusercontent.com/RMcPctjZePcK-ZIxHPh9m0vdpadO8Rbn7_e13OQ_X2nx3VWwKoT-yPcDWcARyUUBPyyi=w2560-h1440' width=350 height=700> <img src='https://play-lh.googleusercontent.com/xM1-aDeE8Asm6meENniFsCVCFCEn8o3_UdbxfFCx4UIu8XsP7G4FDC4EfuFmz6eRbcI=w2560-h1440' width=350 height=700> </div> | <div align="center"> <img src='https://play-lh.googleusercontent.com/EtO67YoF-0kAN6W6mN1QoQ81CbeW4TZgq-zAvJhoML1HxKhBIRqM_eHDmkp2jWbao1o=w2560-h1440' width=350 height=700> <img src='https://play-lh.googleusercontent.com/8HwKOlDv13b_ZCD-NUFqD_ByxAdqY25THWVYVhlfu-nqJwHWAKXN0xYZRSbOmnBlR-gE=w2560-h1440' width=350 height=700> | <div align="center"> <img src='https://play-lh.googleusercontent.com/scVacjLr7ordRI3Q5y5QlmN_DrUUUTy3jsdsdVYFyHaaW6a_VIvAnt5qcsMGk3bDaOs=w2560-h1440' width=350 height=700> <img src='https://play-lh.googleusercontent.com/VZSDRvsDc85DCIQ3nlWdyzHz6GR8jSVzQFnvoN4nUcfYQ8TZHUixuo2tBy5l9B3bl5JL=w2560-h1440' width=350 height=700> |
+| </div>                 |
+| Colors                 | Light themed with primarily blue accents                                                                                                                                                                                                                                                                                                   | Light themed with primarily green/blue accents                                                                                                                                                                                                                                                                                      | Gray-scale with various accents.                                                                                                                                                                                                                                                                                                    |
+| Potential improvements | Very busy application, Poor contrasts                                                                                                                                                                                                                                                                                                      | More consistent coloring , customization locked behind paywall                                                                                                                                                                                                                                                                      | Less bland UI, more identity & consistency                                                                                                                                                                                                                                                                                          |
+| Common/good features   | Very customizable                                                                                                                                                                                                                                                                                                                          | Consistent padding, intuitive & playful                                                                                                                                                                                                                                                                                             | Straight to the point UI, good at handling large volumes of data                                                                                                                                                                                                                                                                    |
 
 ### Prototype
 
