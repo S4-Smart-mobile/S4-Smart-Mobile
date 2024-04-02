@@ -14,7 +14,7 @@ class QuestionsPage extends StatefulWidget {
 }
 
 class _QuestionsPageState extends State<QuestionsPage> {
-  late EmotionType selectedEmotion;
+  EmotionType selectedEmotion = EmotionType.Undefined;
   final List<Map<String, String>> questions = [
     {'question': "Pooping my pants often makes me feel..."},
     {'question': "The weather often makes me feel.."},
@@ -38,7 +38,7 @@ class _QuestionsPageState extends State<QuestionsPage> {
     });
   }
 
-  void goToNextQuestion() {
+  void nextQuestion() {
     setState(() {
       questionIndex += 1;
       selectedEmotion = answers[questionIndex];
@@ -46,11 +46,12 @@ class _QuestionsPageState extends State<QuestionsPage> {
   }
 
   void goBack() {
+    if ((questionIndex - 1) < 0) {
+      context.push('/setup');
+      return;
+    }
+
     setState(() {
-      if ((questionIndex - 1) < 0) {
-        context.push('/setup');
-        return;
-      }
       questionIndex -= 1;
       selectedEmotion = answers[questionIndex];
     });
@@ -122,7 +123,7 @@ class _QuestionsPageState extends State<QuestionsPage> {
                             selectedEmotion: selectedEmotion,
                             questionIndex: questionIndex,
                             questions: questions,
-                            goToNextQuestion: goToNextQuestion,
+                            goToNextQuestion: nextQuestion,
                           ),
                           PreviousButton(
                             goBack: goBack,
