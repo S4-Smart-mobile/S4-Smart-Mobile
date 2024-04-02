@@ -32,6 +32,9 @@ class NextButton extends StatelessWidget {
             alignment: Alignment.center,
             backgroundColor: MaterialStateProperty.resolveWith<Color?>(
               (Set<MaterialState> states) {
+                if (states.contains(MaterialState.disabled)) {
+                  return theme.colorScheme.secondary;
+                }
                 return theme.colorScheme.primary;
               },
             ),

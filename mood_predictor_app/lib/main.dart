@@ -5,6 +5,7 @@ import 'package:mood_predictor_app/pages/more.dart';
 import 'package:mood_predictor_app/pages/questions.dart';
 import 'package:mood_predictor_app/pages/setup.dart';
 import 'package:mood_predictor_app/pages/stats.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MoodPredictor());
 
@@ -51,7 +52,7 @@ class MoodPredictor extends StatelessWidget {
     return MaterialApp.router(
       title: title,
       theme: ThemeData(
-        fontFamily: 'Roboto',
+        textTheme: GoogleFonts.nunitoTextTheme(),
         useMaterial3: true,
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.purple,
