@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mood_predictor_app/classes/emotion_type.dart';
 import 'package:mood_predictor_app/widgets/questions/counter.dart';
 import 'package:mood_predictor_app/widgets/questions/emotion_selector.dart';
-import 'package:mood_predictor_app/widgets/questions/navigational-buttons.dart';
+import 'package:mood_predictor_app/widgets/questions/navigational_buttons.dart';
 import 'package:mood_predictor_app/widgets/questions/question.dart';
-
 import '../helpers/emotion-icons.dart';
 
 class QuestionsPage extends StatefulWidget {
+  const QuestionsPage({super.key});
+
   @override
-  _QuestionsPageState createState() => _QuestionsPageState();
+  QuestionsPageState createState() => QuestionsPageState();
 }
 
-class _QuestionsPageState extends State<QuestionsPage> {
+class QuestionsPageState extends State<QuestionsPage> {
   EmotionType selectedEmotion = EmotionType.Undefined;
   final List<Map<String, String>> questions = [
     {'question': "Pooping my pants often makes me feel..."},

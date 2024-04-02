@@ -8,8 +8,9 @@ class NextButton extends StatelessWidget {
   final int questionIndex;
   final List<Map<String, String>> questions;
 
-  NextButton(
-      {required this.selectedEmotion,
+  const NextButton(
+      {super.key,
+      required this.selectedEmotion,
       required this.questionIndex,
       required this.questions,
       required this.goToNextQuestion});
