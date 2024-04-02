@@ -17,9 +17,12 @@ class QuestionsPage extends StatefulWidget {
 class QuestionsPageState extends State<QuestionsPage> {
   EmotionType selectedEmotion = EmotionType.Undefined;
   final List<Map<String, String>> questions = [
-    {'question': "Pooping my pants often makes me feel..."},
-    {'question': "The weather often makes me feel.."},
-    {'question': "When Morris comes to school, I often feel..."},
+    {'question': "When I visit family I often feel.."},
+    {'question': "When I see my friends, I often feel.."},
+    {'question': "The days I have to work, I often feel..."},
+    {'question': "When I can work on my hobbies, I often feel..."},
+    {'question': "Going shopping often makes me feel..."},
+    {'question': "Exercising often makes me feel..."},
   ];
 
   List<EmotionType> answers = [];
