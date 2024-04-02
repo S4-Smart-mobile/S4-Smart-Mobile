@@ -61,7 +61,7 @@ class NextButton extends StatelessWidget {
 class PreviousButton extends StatelessWidget {
   final void Function() goBack;
 
-  PreviousButton({required this.goBack});
+  const PreviousButton({super.key, required this.goBack});
 
   @override
   Widget build(BuildContext context) {

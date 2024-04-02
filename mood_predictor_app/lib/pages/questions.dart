@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mood_predictor_app/classes/emotion_type.dart';
 import 'package:mood_predictor_app/widgets/questions/counter.dart';
@@ -27,8 +28,8 @@ class _QuestionsPageState extends State<QuestionsPage> {
   @override
   void initState() {
     super.initState();
-    selectedEmotion = EmotionType.Undefined;
     answers = List<EmotionType>.filled(questions.length, EmotionType.Undefined);
+    selectedEmotion = answers[questionIndex];
   }
 
   void setResponse(EmotionType emotionType) {
@@ -63,7 +64,7 @@ class _QuestionsPageState extends State<QuestionsPage> {
 
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
@@ -74,16 +75,10 @@ class _QuestionsPageState extends State<QuestionsPage> {
                 decoration: BoxDecoration(color: theme.colorScheme.primary),
                 child: Column(
                   children: [
-                    Expanded(
-                      flex: 2,
-                      child: QuestionCounter(
-                          current: questionIndex + 1, max: questions.length),
-                    ),
-                    Expanded(
-                      flex: 3,
-                      child: Question(
-                        question: questions[questionIndex]['question']!,
-                      ),
+                    QuestionCounter(
+                        current: questionIndex + 1, max: questions.length),
+                    Question(
+                      question: questions[questionIndex]['question']!,
                     ),
                   ],
                 )),
@@ -96,14 +91,10 @@ class _QuestionsPageState extends State<QuestionsPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    EmotionSelector(
+                        selectedEmotion: selectedEmotion,
+                        setEmotion: setResponse),
                     Expanded(
-                      flex: 2,
-                      child: EmotionSelector(
-                          selectedEmotion: selectedEmotion,
-                          setEmotion: setResponse),
-                    ),
-                    Expanded(
-                      flex: 1,
                       child: Text(
                         selectedEmotion == EmotionType.Undefined
                             ? "None selected"
@@ -115,21 +106,18 @@ class _QuestionsPageState extends State<QuestionsPage> {
                         ),
                       ),
                     ),
-                    Expanded(
-                      flex: 2,
-                      child: Column(
-                        children: [
-                          NextButton(
-                            selectedEmotion: selectedEmotion,
-                            questionIndex: questionIndex,
-                            questions: questions,
-                            goToNextQuestion: nextQuestion,
-                          ),
-                          PreviousButton(
-                            goBack: goBack,
-                          ),
-                        ],
-                      ),
+                    Column(
+                      children: [
+                        NextButton(
+                          selectedEmotion: selectedEmotion,
+                          questionIndex: questionIndex,
+                          questions: questions,
+                          goToNextQuestion: nextQuestion,
+                        ),
+                        PreviousButton(
+                          goBack: goBack,
+                        ),
+                      ],
                     ),
                   ],
                 ),

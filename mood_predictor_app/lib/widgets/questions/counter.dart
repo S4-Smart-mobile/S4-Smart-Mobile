@@ -9,8 +9,10 @@ class QuestionCounter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+        flex: 1,
         child: Container(
             alignment: AlignmentDirectional.center,
+            height: 50,
             child: Text(
               "$current/$max",
               style: const TextStyle(
