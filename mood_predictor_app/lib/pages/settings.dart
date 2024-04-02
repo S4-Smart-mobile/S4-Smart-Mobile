@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mood_predictor_app/classes/custom_button_data.dart';
-import 'package:mood_predictor_app/pages/settings.dart';
 import 'package:mood_predictor_app/widgets/navigation_footer.dart';
 import 'package:mood_predictor_app/widgets/custom_button.dart';
+import 'package:mood_predictor_app/widgets/user_bracket.dart';
+import 'package:mood_predictor_app/classes/user.dart';
 
-class MorePage extends StatelessWidget {
+class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final double fontSize = 18;
 
     return Scaffold(
       appBar: AppBar(
@@ -24,69 +26,72 @@ class MorePage extends StatelessWidget {
         child: SingleChildScrollView(
           padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              UserBracket(
+                user: User(
+                  fullName: 'John Doe',
+                  email: 'johndoe@shemale.com',
+                  profilePictureUrl:
+                      'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
+                ),
+              ),
+              SizedBox(height: 16),
+              const Text(
+                'Configurations',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
+              SizedBox(height: 8),
               CustomButton(
                 buttonData: CustomButtonData(
-                  text: 'Achievements',
-                  icon: Icons.emoji_events,
+                  text: 'Language',
+                  icon: Icons.language,
                   destinationPage: () => const Placeholder(),
-                  fontSize: 24,
+                  fontSize: fontSize,
                 ),
               ),
               CustomButton(
                 buttonData: CustomButtonData(
-                  text: 'Reminders',
-                  icon: Icons.notifications,
+                  text: 'Accessibility',
+                  icon: Icons.accessibility_new,
                   destinationPage: () => const Placeholder(),
-                  fontSize: 24,
+                  fontSize: fontSize,
                 ),
               ),
               CustomButton(
                 buttonData: CustomButtonData(
-                  text: 'Themes',
-                  icon: Icons.color_lens,
+                  text: 'Data Usage',
+                  icon: Icons.data_usage,
                   destinationPage: () => const Placeholder(),
-                  fontSize: 24,
+                  fontSize: fontSize,
+                ),
+              ),
+              SizedBox(height: 32),
+              const Text(
+                'Other',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
+              SizedBox(height: 8),
+              CustomButton(
+                buttonData: CustomButtonData(
+                  text: 'Help & Support',
+                  icon: Icons.help,
+                  destinationPage: () => const Placeholder(),
+                  fontSize: fontSize,
                 ),
               ),
               CustomButton(
                 buttonData: CustomButtonData(
-                  text: 'Emoji Sets',
-                  icon: Icons.emoji_emotions,
+                  text: 'About Us',
+                  icon: Icons.info,
                   destinationPage: () => const Placeholder(),
-                  fontSize: 24,
-                ),
-              ),
-              CustomButton(
-                buttonData: CustomButtonData(
-                  text: 'Pin Lock',
-                  icon: Icons.lock,
-                  destinationPage: () => const Placeholder(),
-                  fontSize: 24,
-                ),
-              ),
-              CustomButton(
-                buttonData: CustomButtonData(
-                  text: 'Stats of the week',
-                  icon: Icons.query_stats,
-                  destinationPage: () => const Placeholder(),
-                  fontSize: 24,
-                ),
-              ),
-              CustomButton(
-                buttonData: CustomButtonData(
-                  text: 'Proggresion',
-                  icon: Icons.checklist,
-                  destinationPage: () => const Placeholder(),
-                  fontSize: 24,
-                ),
-              ),
-              CustomButton(
-                buttonData: CustomButtonData(
-                  text: 'Settings',
-                  icon: Icons.settings,
-                  destinationPage: () => SettingsPage(),
-                  fontSize: 24,
+                  fontSize: fontSize,
                 ),
               ),
             ],
@@ -94,7 +99,7 @@ class MorePage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: const NavigationFooter(
-        widgetType: WidgetType.more,
+        widgetType: WidgetType.blank,
       ),
     );
   }

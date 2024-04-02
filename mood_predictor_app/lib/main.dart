@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mood_predictor_app/pages/home.dart';
 import 'package:mood_predictor_app/pages/more.dart';
+import 'package:mood_predictor_app/pages/settings.dart';
 import 'package:mood_predictor_app/pages/stats.dart';
 
 void main() {
@@ -27,7 +28,7 @@ final _router = GoRouter(
     ),
     GoRoute(
       path: '/settings',
-      builder: (context, state) => Placeholder(),
+      builder: (context, state) => SettingsPage(),
     ),
     GoRoute(
       path: '/setup',
