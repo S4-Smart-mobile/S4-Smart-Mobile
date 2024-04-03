@@ -15,7 +15,7 @@ IconData getIconData(EmotionType emotion) {
     case EmotionType.Angry:
       return FontAwesomeIcons.faceAngry;
     default:
-      return FontAwesomeIcons.question;
+      return FontAwesomeIcons.plus;
   }
 }
 
