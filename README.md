@@ -17,8 +17,10 @@ This document serves as the handlebars for finding your way around this _~~mess~
 ## Organizations & repositories
 
 - [Semester 4: 'Joris & Morris' organization](https://github.com/S4-Smart-mobile)
-- [Duo case 24: 'Cultural Exchange'](https://google.com)
-- [Research document](./documentation/research/cultural-exchange.md)
+- [Duo case 24: 'Cultural Exchange'](./Cultural%20Exchange%20App/)
+  - [Research document](./documentation/research/cultural-exchange.md)
+- [Duo case 4: 'Mood predictor'](./mood_predictor_app/)
+  - [Research document](./documentation/research/mood-predictor.md)
 
 ## Getting started
 
