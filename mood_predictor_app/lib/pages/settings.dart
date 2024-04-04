@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mood_predictor_app/classes/custom_button_data.dart';
 import 'package:mood_predictor_app/widgets/navigation_footer.dart';
-import 'package:mood_predictor_app/widgets/custom_button.dart';
-import 'package:mood_predictor_app/widgets/user_bracket.dart';
+import 'package:mood_predictor_app/widgets/more/customization_button.dart';
+import 'package:mood_predictor_app/widgets/settings/user_bracket.dart';
 import 'package:mood_predictor_app/classes/user.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -14,29 +16,45 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         scrolledUnderElevation: 0,
-        backgroundColor: theme.colorScheme.background,
+        backgroundColor: theme.colorScheme.primary,
         toolbarHeight: 80,
+        leading: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 32),
+          child: IconButton(
+            icon: const Icon(
+              FontAwesomeIcons.chevronLeft,
+              color: Colors.white,
+              size: 24,
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          ),
+        ),
         title: const Padding(
           padding: EdgeInsets.symmetric(horizontal: 32),
-          child: Placeholder(),
+          child: Text(
+            "Settings",
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
       body: Container(
         constraints: const BoxConstraints.expand(),
         child: SingleChildScrollView(
-          padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
+          padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               UserBracket(
                 user: User(
                   fullName: 'John Doe',
-                  email: 'johndoe@shemale.com',
+                  email: 'johndoe@gmail.com',
                   profilePictureUrl:
                       'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               const Text(
                 'Configurations',
                 style: TextStyle(
@@ -44,8 +62,8 @@ class SettingsPage extends StatelessWidget {
                   fontWeight: FontWeight.w300,
                 ),
               ),
-              SizedBox(height: 8),
-              CustomButton(
+              const SizedBox(height: 8),
+              CustomizationButton(
                 buttonData: CustomButtonData(
                   text: 'Language',
                   icon: Icons.language,
@@ -53,7 +71,7 @@ class SettingsPage extends StatelessWidget {
                   fontSize: fontSize,
                 ),
               ),
-              CustomButton(
+              CustomizationButton(
                 buttonData: CustomButtonData(
                   text: 'Accessibility',
                   icon: Icons.accessibility_new,
@@ -61,7 +79,7 @@ class SettingsPage extends StatelessWidget {
                   fontSize: fontSize,
                 ),
               ),
-              CustomButton(
+              CustomizationButton(
                 buttonData: CustomButtonData(
                   text: 'Data Usage',
                   icon: Icons.data_usage,
@@ -69,7 +87,7 @@ class SettingsPage extends StatelessWidget {
                   fontSize: fontSize,
                 ),
               ),
-              SizedBox(height: 32),
+              const SizedBox(height: 32),
               const Text(
                 'Other',
                 style: TextStyle(
@@ -77,8 +95,8 @@ class SettingsPage extends StatelessWidget {
                   fontWeight: FontWeight.w300,
                 ),
               ),
-              SizedBox(height: 8),
-              CustomButton(
+              const SizedBox(height: 8),
+              CustomizationButton(
                 buttonData: CustomButtonData(
                   text: 'Help & Support',
                   icon: Icons.help,
@@ -86,7 +104,7 @@ class SettingsPage extends StatelessWidget {
                   fontSize: fontSize,
                 ),
               ),
-              CustomButton(
+              CustomizationButton(
                 buttonData: CustomButtonData(
                   text: 'About Us',
                   icon: Icons.info,
