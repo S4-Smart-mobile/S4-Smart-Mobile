@@ -14,7 +14,9 @@ class MoodPredictor extends StatelessWidget {
   MoodPredictor({super.key});
 
   static const title = "Mood predictor";
-  static const finishedSetup = false;
+
+  //!! ONLY FOR DEBUGGING, DEFAULT SHOULD BE FALSE
+  static const finishedSetup = true;
 
   final _router = GoRouter(
     initialLocation: finishedSetup ? '/' : '/setup',
