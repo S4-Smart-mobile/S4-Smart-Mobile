@@ -1,6 +1,6 @@
 import "dart:convert";
 import "package:flutter/material.dart";
-import "package:mood_predictor_app/widgets/custom_button.dart";
+import "package:mood_predictor_app/widgets/more/customization_button.dart";
 
 class CustomButtonData {
   final String id = new UniqueKey().toString();

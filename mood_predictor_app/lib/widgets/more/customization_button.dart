@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mood_predictor_app/classes/custom_button_data.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomizationButton extends StatelessWidget {
   final CustomButtonData buttonData;
 
-  CustomButton({required this.buttonData});
+  CustomizationButton({required this.buttonData});
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -17,7 +19,7 @@ class CustomButton extends StatelessWidget {
       },
       child: Column(children: [
         Container(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.fromLTRB(32, 16, 32, 16),
           decoration: BoxDecoration(
             border: Border.all(color: Colors.transparent),
           ),
@@ -25,22 +27,22 @@ class CustomButton extends StatelessWidget {
             children: [
               Icon(
                 buttonData.icon,
-                color: Color(0xFF752EBB),
+                color: theme.colorScheme.primary,
                 size: buttonData.fontSize * 1.5,
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 buttonData.text,
                 style: TextStyle(
-                  color: Color(0xFF752EBB),
+                  color: theme.colorScheme.primary,
                   fontSize: buttonData.fontSize,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Icon(
                 Icons.arrow_forward,
-                color: Color(0xFF752EBB),
+                color: theme.colorScheme.primary,
                 size: buttonData.fontSize * 1.5,
               ),
             ],
@@ -49,7 +51,7 @@ class CustomButton extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 1,
-          color: Color(0xFF752EBB), // Purple line color
+          color: theme.colorScheme.primary,
         ),
       ]),
     );
