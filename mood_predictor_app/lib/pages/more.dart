@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mood_predictor_app/classes/custom_button_data.dart';
 import 'package:mood_predictor_app/pages/settings.dart';
+import 'package:mood_predictor_app/widgets/default_header.dart';
+import 'package:mood_predictor_app/widgets/home/week_header/week_header.dart';
 import 'package:mood_predictor_app/widgets/navigation_footer.dart';
 import 'package:mood_predictor_app/widgets/custom_button.dart';
 
@@ -8,17 +10,8 @@ class MorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-
     return Scaffold(
-      appBar: AppBar(
-        scrolledUnderElevation: 0,
-        backgroundColor: theme.colorScheme.background,
-        toolbarHeight: 80,
-        title: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 32),
-          child: Placeholder(),
-        ),
-      ),
+      appBar: DefaultHeader(title: 'More'),
       body: Container(
         constraints: const BoxConstraints.expand(),
         child: SingleChildScrollView(
