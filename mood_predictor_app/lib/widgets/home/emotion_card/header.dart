@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mood_predictor_app/classes/emotion_type.dart';
 import 'package:intl/intl.dart';
 
 class EmotionCardHeader extends StatelessWidget {
-  late String date;
+  final String date;
 
   EmotionCardHeader({super.key, required this.date});
 
@@ -41,16 +40,13 @@ class EmotionCardHeader extends StatelessWidget {
         todaysDate.isAtSameMomentAs(parsedCurrentDate)
             ? todayDateText()
             : regularDateText(),
-        More
+        more
       ],
     );
   }
 
-  final More = GestureDetector(
-    onTap: () {
-      //TODO: Implement logic
-      print("More pressed");
-    },
+  final more = GestureDetector(
+    onTap: () {},
     child: const Opacity(
       opacity: 0.5,
       child: Icon(FontAwesomeIcons.ellipsis),

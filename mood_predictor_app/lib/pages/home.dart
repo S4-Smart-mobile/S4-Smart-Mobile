@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:mood_predictor_app/classes/emotion_data.dart';
-import 'package:mood_predictor_app/classes/emotion_type.dart';
-import 'package:mood_predictor_app/helpers/emotion_icons.dart';
-import 'package:mood_predictor_app/widgets/home/emotion_card/emotion_card.dart';
 import 'package:mood_predictor_app/widgets/home/table/header.dart';
 import 'package:mood_predictor_app/widgets/home/table/table_builder.dart';
 import 'package:mood_predictor_app/widgets/home/week_header/week_header.dart';

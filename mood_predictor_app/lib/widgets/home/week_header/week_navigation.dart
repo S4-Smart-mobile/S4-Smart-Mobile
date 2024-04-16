@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mood_predictor_app/classes/emotion_type.dart';
 
 class WeekNavigation extends StatelessWidget {
-  late Icon icon;
-  late Function() onPressNavigate;
-  late Function() canNavigate;
-  WeekNavigation({
+  final Icon icon;
+  final Function() onPressNavigate;
+  final Function() canNavigate;
+
+  const WeekNavigation({
     super.key,
     required this.icon,
     required this.onPressNavigate,

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class HeaderContent extends StatelessWidget {
-  late int weekNumber;
-  late String startDate;
-  late String endDate;
+  final int weekNumber;
+  final String startDate;
+  final String endDate;
 
-  HeaderContent(
+  const HeaderContent(
       {super.key,
       required this.weekNumber,
       required this.startDate,

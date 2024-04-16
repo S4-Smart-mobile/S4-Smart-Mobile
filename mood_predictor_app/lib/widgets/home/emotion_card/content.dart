@@ -3,10 +3,10 @@ import 'package:mood_predictor_app/classes/emotion_type.dart';
 import 'package:mood_predictor_app/helpers/emotion_icons.dart';
 
 class EmotionCardContent extends StatelessWidget {
-  late EmotionType predicted;
-  late EmotionType actual;
+  final EmotionType predicted;
+  final EmotionType actual;
 
-  EmotionCardContent(
+  const EmotionCardContent(
       {super.key, required this.predicted, required this.actual});
 
   @override

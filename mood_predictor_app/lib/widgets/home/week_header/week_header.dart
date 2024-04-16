@@ -4,14 +4,14 @@ import 'package:mood_predictor_app/widgets/home/week_header/header_content.dart'
 import 'package:mood_predictor_app/widgets/home/week_header/week_navigation.dart';
 
 class WeekHeader extends StatelessWidget {
-  late int weekNumber;
-  late String startDate;
-  late String endDate;
-  late Function() openNextWeek;
-  late Function() openPreviousWeek;
-  late Function(int) canNavigate;
+  final int weekNumber;
+  final String startDate;
+  final String endDate;
+  final Function() openNextWeek;
+  final Function() openPreviousWeek;
+  final Function(int) canNavigate;
 
-  WeekHeader(
+  const WeekHeader(
       {super.key,
       required this.weekNumber,
       required this.startDate,

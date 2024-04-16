@@ -3,9 +3,9 @@ import 'package:mood_predictor_app/classes/emotion_data.dart';
 import 'package:mood_predictor_app/widgets/home/table/emotion_row.dart';
 
 class TableBuilder extends StatelessWidget {
-  late EmotionWeek week;
+  final EmotionWeek week;
 
-  TableBuilder({super.key, required this.week});
+  const TableBuilder({super.key, required this.week});
 
   @override
   Widget build(BuildContext context) {
