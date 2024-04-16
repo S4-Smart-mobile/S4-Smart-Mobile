@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         scrolledUnderElevation: 0,
         backgroundColor: theme.colorScheme.secondary,
-        toolbarHeight: 80,
+        toolbarHeight: 60,
         title: WeekHeader(
           weekNumber: selectedWeek.weekNumber,
           startDate: selectedWeek.days.last.date,
