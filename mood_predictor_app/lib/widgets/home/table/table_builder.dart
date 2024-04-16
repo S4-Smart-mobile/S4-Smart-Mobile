@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mood_predictor_app/classes/emotion_data.dart';
 import 'package:mood_predictor_app/widgets/home/table/emotion_row.dart';
-import 'package:mood_predictor_app/widgets/home/table/header.dart';
 
 class TableBuilder extends StatelessWidget {
   late EmotionWeek week;
@@ -18,7 +17,7 @@ class TableBuilder extends StatelessWidget {
             decoration: const BoxDecoration(
               border: Border(
                 top: BorderSide(
-                  color: Colors.black,
+                  color: Colors.black38,
                   width: 1.0,
                 ),
               ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:mood_predictor_app/classes/emotion_data.dart';
 import 'package:mood_predictor_app/classes/emotion_type.dart';
-import 'package:mood_predictor_app/helpers/emotion-icons.dart';
+import 'package:mood_predictor_app/helpers/emotion_icons.dart';
 import 'package:mood_predictor_app/widgets/home/table/date_cell.dart';
 
 class EmotionRow extends StatelessWidget {
@@ -12,47 +12,29 @@ class EmotionRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (day.actual == EmotionType.Undefined &&
+    var today = DateUtils.dateOnly(DateTime.now());
+    var actual = DateUtils.dateOnly(DateTime.parse(day.date));
+
+    if (today.isAtSameMomentAs(actual)) {
+      return todayDay(context);
+    } else if (day.actual == EmotionType.Undefined &&
         day.prediction == EmotionType.Undefined) {
       return noDataDay(context);
+    } else if (day.actual == day.prediction) {
+      return equalDay(context);
     } else {
       return defaultDay(context);
     }
   }
 
-  Widget noDataDay(BuildContext context) {
-    var todaysDate = DateTime.now();
-    var parsedCurrentDate = DateUtils.dateOnly(DateTime.parse(day.date));
-    var formattedCurrentDate =
-        DateFormat('EEE dd-MM').format(parsedCurrentDate).toUpperCase();
+  Widget todayDay(BuildContext context) {
+    final theme = Theme.of(context);
 
-    return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 32),
-        child: Row(
-          children: [
-            buildDateCell(
-                formattedCurrentDate, todaysDate, parsedCurrentDate, context),
-            const Expanded(
-              flex: 2,
-              child: Center(
-                child: Text("No data!"),
-              ),
-            ),
-          ],
-        ));
-  }
-
-  Widget defaultDay(BuildContext context) {
-    var todaysDate = DateTime.now();
-    var parsedCurrentDate = DateUtils.dateOnly(DateTime.parse(day.date));
-    var formattedCurrentDate =
-        DateFormat('EEE dd-MM').format(parsedCurrentDate).toUpperCase();
-
-    return SizedBox(
+    return Container(
+      color: theme.colorScheme.secondary,
       child: Row(
         children: [
-          buildDateCell(
-              formattedCurrentDate, todaysDate, parsedCurrentDate, context),
+          DateCell(date: day.date),
           _buildEmotionCell(day.prediction),
           _buildEmotionCell(day.actual)
         ],
@@ -60,10 +42,55 @@ class EmotionRow extends StatelessWidget {
     );
   }
 
-  Widget _buildEmotionCell(EmotionType emotion) {
+  Widget noDataDay(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Row(
+      children: [
+        DateCell(date: day.date),
+        Expanded(
+          flex: 2,
+          child: Center(
+            child: Text(
+              "NO DATA",
+              style: TextStyle(
+                  color: theme.colorScheme.primary,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget defaultDay(BuildContext context) {
+    return SizedBox(
+      child: Row(
+        children: [
+          DateCell(date: day.date),
+          _buildEmotionCell(day.prediction),
+          _buildEmotionCell(day.actual)
+        ],
+      ),
+    );
+  }
+
+  Widget equalDay(BuildContext context) {
+    return SizedBox(
+      child: Row(
+        children: [
+          DateCell(date: day.date),
+          _buildEmotionCell(day.actual, flexVal: 2),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildEmotionCell(EmotionType emotion, {int flexVal = 1}) {
     return Expanded(
+      flex: flexVal,
       child: Padding(
-        padding: const EdgeInsets.all(32),
+        padding: const EdgeInsets.symmetric(horizontal: 32),
         child: Center(
           child: Icon(getIconData(emotion),
               size: 36, color: getEmotionColor(emotion)),

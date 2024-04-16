@@ -19,16 +19,22 @@ class HeaderContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Column(
       children: [
         Text(
           "Week $weekNumber",
-          style:
-              const TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+          style: TextStyle(
+              color: theme.colorScheme.primary,
+              fontWeight: FontWeight.w600,
+              fontSize: 20),
         ),
         Text("${_parseDate(startDate)} / ${_parseDate(endDate)}",
-            style: const TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w500)),
+            style: TextStyle(
+                color: theme.colorScheme.primary,
+                fontWeight: FontWeight.w500,
+                fontSize: 18)),
       ],
     );
   }

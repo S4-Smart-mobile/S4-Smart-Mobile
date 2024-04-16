@@ -66,22 +66,6 @@ final List<EmotionDay> week3Days = [
       date: "2024-04-16",
       prediction: EmotionType.Happy,
       actual: EmotionType.Happy),
-  EmotionDay(
-      date: "2024-04-17",
-      prediction: EmotionType.Sad,
-      actual: EmotionType.Great),
-  EmotionDay(
-      date: "2024-04-18", prediction: EmotionType.Ok, actual: EmotionType.Ok),
-  EmotionDay(
-      date: "2024-04-19",
-      prediction: EmotionType.Angry,
-      actual: EmotionType.Happy),
-  EmotionDay(
-      date: "2024-04-20", prediction: EmotionType.Sad, actual: EmotionType.Sad),
-  EmotionDay(
-      date: "2024-04-21",
-      prediction: EmotionType.Great,
-      actual: EmotionType.Great),
 ];
 
 final EmotionWeek week_1 = EmotionWeek(

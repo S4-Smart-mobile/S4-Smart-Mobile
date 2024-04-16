@@ -14,10 +14,13 @@ class WeekNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return IconButton(
       onPressed: canNavigate() ? onPressNavigate : null,
       icon: icon,
-      color: Colors.white,
+      color: theme.colorScheme.primary,
+      iconSize: 24,
     );
   }
 }

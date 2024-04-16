@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:mood_predictor_app/classes/emotion_data.dart';
 import 'package:mood_predictor_app/classes/emotion_type.dart';
-import 'package:mood_predictor_app/helpers/emotion-icons.dart';
+import 'package:mood_predictor_app/helpers/emotion_icons.dart';
 import 'package:mood_predictor_app/widgets/home/emotion_card/emotion_card.dart';
 import 'package:mood_predictor_app/widgets/home/table/header.dart';
 import 'package:mood_predictor_app/widgets/home/table/table_builder.dart';
@@ -36,8 +36,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         scrolledUnderElevation: 0,
-        backgroundColor: theme.colorScheme.primary,
-        toolbarHeight: 100,
+        backgroundColor: theme.colorScheme.secondary,
+        toolbarHeight: 80,
         title: WeekHeader(
           weekNumber: selectedWeek.weekNumber,
           startDate: selectedWeek.days.last.date,

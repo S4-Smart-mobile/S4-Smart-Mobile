@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mood_predictor_app/classes/emotion_type.dart';
-import 'package:mood_predictor_app/helpers/emotion-icons.dart';
+import 'package:mood_predictor_app/helpers/emotion_icons.dart';
 
 class EmotionCardContent extends StatelessWidget {
   late EmotionType predicted;
