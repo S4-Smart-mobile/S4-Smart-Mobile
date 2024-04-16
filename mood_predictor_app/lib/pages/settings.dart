@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
 import 'package:mood_predictor_app/classes/custom_button_data.dart';
-import 'package:mood_predictor_app/widgets/default_header.dart';
 import 'package:mood_predictor_app/widgets/navigation_footer.dart';
 import 'package:mood_predictor_app/widgets/more/customization_button.dart';
 import 'package:mood_predictor_app/widgets/settings/user_bracket.dart';
@@ -12,7 +10,7 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final double fontSize = 18;
+    const double fontSize = 18;
 
     return Scaffold(
       appBar: AppBar(

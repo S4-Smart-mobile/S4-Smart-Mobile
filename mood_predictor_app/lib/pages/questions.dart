@@ -5,7 +5,7 @@ import 'package:mood_predictor_app/widgets/questions/counter.dart';
 import 'package:mood_predictor_app/widgets/questions/emotion_selector.dart';
 import 'package:mood_predictor_app/widgets/questions/navigational_buttons.dart';
 import 'package:mood_predictor_app/widgets/questions/question.dart';
-import '../helpers/emotion-icons.dart';
+import '../helpers/emotion_icons.dart';
 
 class QuestionsPage extends StatefulWidget {
   const QuestionsPage({super.key});

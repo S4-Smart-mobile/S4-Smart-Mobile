@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mood_predictor_app/classes/emotion_data.dart';
-import 'package:mood_predictor_app/classes/emotion_type.dart';
-import 'package:mood_predictor_app/widgets/home/emotion_card/emotion_card.dart';
+import 'package:mood_predictor_app/widgets/home/table/header.dart';
+import 'package:mood_predictor_app/widgets/home/table/table_builder.dart';
 import 'package:mood_predictor_app/widgets/home/week_header/week_header.dart';
 import 'package:mood_predictor_app/widgets/navigation_footer.dart';
 import 'package:mood_predictor_app/data/testdata.dart';
@@ -32,8 +32,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         scrolledUnderElevation: 0,
-        backgroundColor: theme.colorScheme.primary,
-        toolbarHeight: 100,
+        backgroundColor: theme.colorScheme.secondary,
+        toolbarHeight: 60,
         title: WeekHeader(
           weekNumber: selectedWeek.weekNumber,
           startDate: selectedWeek.days.last.date,
@@ -50,16 +50,14 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.all(Radius.circular(15)),
         ),
         padding: const EdgeInsets.all(16),
-        child: ListView.builder(
-          itemCount: selectedWeek.days.length,
-          itemBuilder: (BuildContext context, int dayIndex) {
-            return ListTile(
-              title: EmotionCard(
-                  predicted: selectedWeek.days[dayIndex].prediction,
-                  actual: selectedWeek.days[dayIndex].actual,
-                  date: selectedWeek.days[dayIndex].date),
-            );
-          },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const TableHeader(),
+            Expanded(
+              child: TableBuilder(week: selectedWeek),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: const NavigationFooter(

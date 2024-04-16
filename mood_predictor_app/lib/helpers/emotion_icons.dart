@@ -5,7 +5,7 @@ import 'package:mood_predictor_app/classes/emotion_type.dart';
 IconData getIconData(EmotionType emotion) {
   switch (emotion) {
     case EmotionType.Happy:
-      return FontAwesomeIcons.faceSmile;
+      return FontAwesomeIcons.faceGrinStars;
     case EmotionType.Great:
       return FontAwesomeIcons.faceGrin;
     case EmotionType.Ok:
@@ -32,7 +32,7 @@ Color getEmotionColor(EmotionType emotion) {
     case EmotionType.Angry:
       return angryColor;
     default:
-      return Colors.black;
+      return defaultColor;
   }
 }
 
@@ -41,3 +41,4 @@ var satisfiedColor = const Color(0xFF468FAF);
 var okColor = const Color(0xFFF8961E);
 var sadColor = const Color(0xFFF3722C);
 var angryColor = const Color(0xFFF94144);
+var defaultColor = const Color(0XFF752EBB);

@@ -4,11 +4,11 @@ import 'package:mood_predictor_app/widgets/home/emotion_card/content.dart';
 import 'package:mood_predictor_app/widgets/home/emotion_card/header.dart';
 
 class EmotionCard extends StatelessWidget {
-  late EmotionType predicted;
-  late EmotionType actual;
-  late String date;
+  final EmotionType predicted;
+  final EmotionType actual;
+  final String date;
 
-  EmotionCard(
+  const EmotionCard(
       {super.key,
       required this.predicted,
       required this.actual,
