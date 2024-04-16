@@ -50,11 +50,20 @@ class EmotionRow extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Center(
-            child: Text(
-              "NO DATA",
-              style: TextStyle(
-                  color: theme.colorScheme.primary,
-                  fontWeight: FontWeight.bold),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(getIconData(EmotionType.Undefined),
+                    size: 24, color: getEmotionColor(EmotionType.Undefined)),
+                const SizedBox(width: 8),
+                Text(
+                  "NO DATA",
+                  style: TextStyle(
+                    color: theme.colorScheme.primary,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ),
         ),
