@@ -339,7 +339,7 @@ The secondary version of the app, here we created some alternative designs to th
 
 ### Test
 
-We did some UX testing by asking multiple (target audience-) users their opinions of different screens, only giving out the base information such as what the app is, what it is supposed to do and what the screen's place is within the application. Here we asked individuals to rate each screen on what they thought the intention was, what aspects they liked/disliked etc. Eventually we came up with the final version (final screen in [V2](#version-ii)) of the designs, we implemented this but sadly were not able with the time left to UX test the actual implementation.
+We did some [UX testing](../research/mood-predictor-ux-testing.md) by asking multiple (target audience-) users their opinions of different screens, only giving out the base information such as what the app is, what it is supposed to do and what the screen's place is within the application. Here we asked individuals to rate each screen on what they thought the intention was, what aspects they liked/disliked etc. Eventually we came up with the final version (final screen in [V2](#version-ii)) of the designs, we implemented this but sadly were not able with the time left to UX test the actual implementation.
 
 ## External links
 
