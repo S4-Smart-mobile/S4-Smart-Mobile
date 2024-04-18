@@ -24,6 +24,10 @@
       - [Brainstorming](#brainstorming)
       - [Competitor apps](#competitor-apps)
     - [Prototype](#prototype)
+      - [Colour palette](#colour-palette)
+      - [Iterations](#iterations)
+        - [Version I](#version-i)
+        - [Version II](#version-ii)
     - [Test](#test)
   - [External links](#external-links)
 
@@ -293,10 +297,53 @@ After which we created a basic storyboard to get a more general overview of func
 
 ### Prototype
 
+Feel free to visit the [Figma file](https://www.figma.com/file/jL4eFw7Sp32cZ8vMQ4LUv2/MoodTracker?type=design&node-id=0%3A1&mode=design&t=1fAoXf3JNF4EDCEP-1) for all content related to the design/prototyping fase.
+
+#### Colour palette
+
+The palette was much simpler, to create a more professional looking environment as well as it giving us the chance to design something where colour is not the primary source of attention-grabbing. These colors are the right contrast for web-based applications.
+
+| Title       | Color                                                           | Hex Code |
+| ----------- | --------------------------------------------------------------- | -------- |
+| Primary     | ![#FAB440](https://via.placeholder.com/15/752EBB/000000?text=+) | #752EBB  |
+| Secondary   | ![#4E47C6](https://via.placeholder.com/15/ECE9FF/000000?text=+) | #ECE9FF  |
+| Background  | ![#07143F](https://via.placeholder.com/15/FFFFFF/000000?text=+) | #FFFFFF  |
+| Dirty-white | ![#D90368](https://via.placeholder.com/15/F3F3F3/000000?text=+) | #F3F3F3  |
+
+![A photo of an online contrast checker giving a high rating.](../static/img/contrast-checker.png)
+
+![Another photo of an online contrast checker giving a high rating.](../static/img/contrast-checker-2.png)
+
+#### Iterations
+
+To accompany these designs we speak of 2 major versions, our original fletched-out idea and the version which includes new screens for UX testing.
+
+##### Version I
+
+[Version 1 - app design](../static/MoodTracker-v1.pdf)
+
+The original version of the app, as most screens are implemented within the mobile application.
+
+##### Version II
+
+[Version 2 - app design](../static/MoodTracker-v2.pdf)
+
+The secondary version of the app, here we created some alternative designs to the home screen based on a few concerns:
+
+- 'TODAY' is the most important, yet the actual importance within the screen is relatively low, how do we improve it's significance?
+- What are 'good' ways to visualize missing data?
+- How many days would a user WANT to see at once?
+- If a prediction matches the actual state, why show 2 emojis?
+- Is the current structure correct, what are alternative options?
+- Is the text necessary? As emoji's/emoticons are essentially a 'universal' replacement for text. [^4]
+
 ### Test
+
+We did some UX testing by asking multiple (target audience-) users their opinions of different screens, only giving out the base information such as what the app is, what it is supposed to do and what the screen's place is within the application. Here we asked individuals to rate each screen on what they thought the intention was, what aspects they liked/disliked etc. Eventually we came up with the final version (final screen in [V2](#version-ii)) of the designs, we implemented this but sadly were not able with the time left to UX test the actual implementation.
 
 ## External links
 
 [^1]: [The Interaction Design foundation is a foundation which focuses on designing a pleasant user experience through course work and learning materials.](https://www.interaction-design.org/literature/topics/design-thinking)
 [^2]: [The Data Visualisation Catalogue is a project developed by Severino Ribecca to create a (non-code-based) library of different information visualisation types.](https://datavizcatalogue.com/index.html)
 [^3]: [Content was original written by a person but later reformatted and compacted by ChatGPT.](https://chat.openai.com/)
+[^4]: [As implied here by the creator of the Emoticon (predecessor of emoji's)](https://web.archive.org/web/20071012051803/http://www.cnn.com/2007/TECH/09/18/emoticon.anniversary.ap/index.html)
