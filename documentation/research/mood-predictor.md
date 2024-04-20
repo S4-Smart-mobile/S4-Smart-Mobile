@@ -78,7 +78,7 @@ To keep the scope of the project precise, maintainable and specific the followin
 
 | **Attribute**  | **Boris Hendrix**                                                                                        | **Katie Acker**                                                                                         |
 | -------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| _Image_        | <img src="https://cdn.pixabay.com/photo/2020/05/10/15/52/man-5154583_1280.jpg" width="400" height="650"> | <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg" width="500" height="300"> |
+| _Image_        | <img src="https://images.pexels.com/photos/3772614/pexels-photo-3772614.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="700" height="400"> | <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg" width="500" height="300"> |
 | _Name_         | Boris Hendrix                                                                                            | Katie Acker                                                                                             |
 | _Sex_          | Male                                                                                                     | Female                                                                                                  |
 | _Age_          | 24                                                                                                       | 17                                                                                                      |
